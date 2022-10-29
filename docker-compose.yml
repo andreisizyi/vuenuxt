@@ -3,7 +3,7 @@ version: "3"
 services:
   #Node
   node:
-    container_name: node-vue
+    container_name: node-vue-nuxt
     build:
       context: ./
       dockerfile: Dockerfile_NODE
@@ -13,6 +13,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
+      # - "3000:3000"
     networks:
       - app-network
     restart: unless-stopped
