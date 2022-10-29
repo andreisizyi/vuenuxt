@@ -1,11 +1,11 @@
 <template>
   <!-- <Tutorial/> -->
-  <button @click="count++">{{ count }}</button>
+  <button @click="count++">{{ count }} this other page</button>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'TestPage',
   data: () => ({ count: 1 })
 }
 </script>
