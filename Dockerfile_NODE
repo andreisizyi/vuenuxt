@@ -1,0 +1,8 @@
+FROM node:18
+
+USER root
+
+RUN echo 'hello'
+
+# CMD node example.js ; tail -f /dev/null
+CMD node server.js

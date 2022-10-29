@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  #Node
+  node:
+    container_name: node-vue
+    build:
+      context: ./
+      dockerfile: Dockerfile_NODE
+    working_dir: /var/www
+    volumes:
+      - ./project:/var/www
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - app-network
+    restart: unless-stopped
+#Docker Networks
+networks:
+  app-network:
+    driver: bridge
